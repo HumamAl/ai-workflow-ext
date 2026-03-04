@@ -2,7 +2,7 @@
 
 **Q: Start your application with "AI Workflow Expert"**
 
-AI Workflow Expert — built a working Chrome extension demo for this before applying: {VERCEL_URL}. The context menu and toolbar icon both route highlighted text to ChatGPT's input, with retry logic for the DOM insertion.
+AI Workflow Expert — built a working Chrome extension demo for this before applying: https://ai-workflow-ext.vercel.app. The context menu and toolbar icon both route highlighted text to ChatGPT's input, with retry logic for the DOM insertion.
 
 ---
 
@@ -16,4 +16,4 @@ Built extensions with MV3 service workers, content scripts, and context menu API
 
 GitHub: https://github.com/HumamAl
 
-Demo built specifically for this job (context menu + toolbar + resilient text insertion): {VERCEL_URL}
+Demo built specifically for this job (context menu + toolbar + resilient text insertion): https://ai-workflow-ext.vercel.app

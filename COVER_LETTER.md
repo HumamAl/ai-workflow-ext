@@ -1,6 +1,6 @@
 Hi,
 
-The "resilient" text insertion is the real work here — ChatGPT's DOM structure changes enough that naive insertion breaks. Built a demo showing how I'd handle it: {VERCEL_URL}
+The "resilient" text insertion is the real work here — ChatGPT's DOM structure changes enough that naive insertion breaks. Built a demo showing how I'd handle it: https://ai-workflow-ext.vercel.app
 
 Context menu, toolbar icon, and a retry mechanism that checks for the input element before injecting. All in plain JS, Manifest V3. Previously built an AI workflow automation tool that cut a 4-hour manual process to 20 minutes.
 
