@@ -13,6 +13,10 @@ import {
   User,
   ArrowRight,
   Github,
+  History,
+  MessageSquareText,
+  Settings,
+  Code,
 } from "lucide-react";
 
 // ═══════════════════════════════════════════════════════════════════════════
@@ -23,19 +27,18 @@ import {
 // ═══════════════════════════════════════════════════════════════════════════
 
 const navItems = [
-  { href: "/", label: "Dashboard", icon: LayoutDashboard },
-  // Dashboard Builder agent: add 3-5 feature page nav items here.
-  // Example: { href: "/orders", label: "Orders", icon: ShoppingCart },
+  { href: "/", label: "Extension Overview", icon: LayoutDashboard },
+  { href: "/workflows", label: "Workflow Log", icon: History },
+  { href: "/templates", label: "Prompt Templates", icon: MessageSquareText },
+  { href: "/config", label: "Extension Config", icon: Settings },
+  { href: "/selectors", label: "Selector Guide", icon: Code },
 ];
 
 function SidebarLogo({ collapsed }: { collapsed: boolean }) {
   return (
     <div className="p-4 border-b border-border/60 flex items-center gap-3">
-      {/* Agent: replace the letter icon with a relevant Lucide icon if appropriate */}
-      <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
-        <span className="text-primary font-bold text-sm font-mono">
-          {APP_CONFIG.appName.charAt(0)}
-        </span>
+      <div className="w-8 h-8 rounded-lg bg-primary/15 flex items-center justify-center shrink-0">
+        <MessageSquareText className="w-4 h-4 text-primary" />
       </div>
       {!collapsed && (
         <div className="overflow-hidden">

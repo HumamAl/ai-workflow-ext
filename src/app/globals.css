@@ -110,9 +110,9 @@
         --primary-h with domain-appropriate oklch values.
         See the Creative Brief's colorDirection for the target color.
         QA rejects builds where --primary stays oklch(0.205 0 0). !! */
-  --primary: oklch(0.205 0 0);
+  --primary: oklch(0.62 0.16 195);
   --primary-foreground: oklch(0.985 0 0);
-  --primary-h: 270; /* Integer hue extracted from --primary */
+  --primary-h: 195;
 
   /* ── Derived Color Tokens ────────────────────────────────── */
   --section-dark: oklch(0.10 0.02 var(--primary-h));
@@ -120,8 +120,8 @@
   --secondary-foreground: oklch(0.205 0 0);
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
+  --accent: oklch(0.68 0.14 200);
+  --accent-foreground: oklch(0.92 0 0);
 
   /* ── Semantic Colors ─────────────────────────────────────── */
   --destructive: oklch(0.577 0.245 27.325);
@@ -133,27 +133,27 @@
   /* ── Borders & Inputs ────────────────────────────────────── */
   --border: oklch(0.922 0 0);
   --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
+  --ring: oklch(0.62 0.16 195);
 
   /* ── Chart Colors ────────────────────────────────────────────
      Layout Builder harmonizes to primary hue. See design-system.md. */
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
+  --chart-1: oklch(0.62 0.16 195);
+  --chart-2: oklch(0.68 0.14 210);
+  --chart-3: oklch(0.55 0.12 230);
+  --chart-4: oklch(0.75 0.15 175);
+  --chart-5: oklch(0.60 0.10 160);
 
   /* ── Sidebar Colors ──────────────────────────────────────────
      After color override: --sidebar-primary and --sidebar-ring
      should match --primary.                                     */
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar: oklch(0.13 0.02 265);
+  --sidebar-foreground: oklch(0.85 0 0);
+  --sidebar-primary: oklch(0.62 0.16 195);
   --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --sidebar-accent: oklch(0.18 0.02 265);
+  --sidebar-accent-foreground: oklch(0.92 0 0);
+  --sidebar-border: oklch(1 0 0 / 0.08);
+  --sidebar-ring: oklch(0.62 0.16 195);
 
   /* ── Surface / Card Tokens ───────────────────────────────────
      Driven by [data-theme] aesthetic — not overridden per domain.
@@ -193,11 +193,7 @@
   --content-padding: 1.5rem;
   --nav-item-py: 0.5rem;
 
-  /* Sidebar surface — override to tint sidebar by domain:
-     White (default): oklch(1 0 0)
-     Tinted:          oklch(0.985 0.008 var(--primary-h))
-     Subdued:         oklch(0.97 0.005 var(--primary-h))          */
-  --sidebar-bg: oklch(1 0 0);
+  --sidebar-bg: oklch(0.13 0.02 265);
 
   /* Tab bar background — tint to primary hue subtly if desired */
   --tab-bar-bg: var(--background);
@@ -967,6 +963,16 @@
     box-shadow: 2px 2px 0 oklch(0.10 0 0);
   }
 
+}
+
+/* ── Staggered card reveal animation ──────────────────────── */
+@keyframes fade-up-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-up-in {
+  animation-name: fade-up-in;
+  animation-timing-function: ease-out;
 }
 
 /* ── Frame utility classes ─────────────────────────────────── */
